@@ -1,0 +1,38 @@
+.heading{
+    text-align: left;
+    background-color: black;
+    color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 50px;
+    margin: 10px;
+}
+
+.product-show{
+    height: 100vh;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+ }
+
+.rating-show{
+    background-color: antiquewhite;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20%;
+}
+
+.rating-show .rating-heading{
+    background-color: rgb(151, 8, 3);
+    color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
