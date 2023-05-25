@@ -2,10 +2,12 @@
 
 import './Rating.css'
 import { FaRegStar } from 'react-icons/fa';
+
 const Rating = ({ ratingHandler, productId, starStyle }) => {
     //For Hover
     const starArry = [1, 2, 3, 4, 5];
 
+    // Get Disbale Data
     return (
         <div className='rating-container'>
             {
