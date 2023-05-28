@@ -1,21 +1,22 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 
-export const ShareContext = createContext();
+export const ShareContext = createContext(null);
 
-const ProductContext = ({children}) => {
+const ProductContext = ({ children }) => {
     const [ratingArr, setRatingArr] = useState([]);
-    // For Duplicate Data
-    const [productExits,setProductExits] = useState(false);
 
-    const data = {setRatingArr,ratingArr,setProductExits,productExits}
+    useEffect(() => {
+        const localData = JSON.parse(localStorage.getItem("store-data"))
+        setRatingArr(localData ? localData : []);
+    }, [])
+    
+    const data = { setRatingArr, ratingArr }
     return (
-        <div>
-            <ShareContext.Provider value={data}>
-                {children}
-            </ShareContext.Provider>
-        </div>
+        <ShareContext.Provider value={data}>
+            {children}
+        </ShareContext.Provider>
     );
 };
 
