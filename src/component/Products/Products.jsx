@@ -7,10 +7,11 @@ const Products = () => {
     const [products, setProducts] = useState([]);
     // Fetch Data from json file
     useEffect(() => {
-        fetch('../../../tshirt.json')
+            fetch('../../../tshirt.json')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
+
 
     return (
         <div className="products-container">

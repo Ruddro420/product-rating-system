@@ -39,6 +39,7 @@ const Product = ({ product }) => {
                             fullSymbol={<FaRegStar style={{ background: 'green', color: 'white', padding: '5px', margin: '10px', borderRadius: '5px' }} size={30} />}
                             onChange={(rate) => ratingHandler(rate)}
                             readonly={ratingCount}
+                            stop={10}
                         />
                     </div>
                     <div className="card-actions justify-start">
